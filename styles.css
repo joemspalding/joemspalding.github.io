@@ -21,8 +21,55 @@ header {
 .about {
     flex-direction: column;
 }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.likes {
+    border-color: green;
+}
+.dislikes {
+    border-color: red;
+}
+.flex-row .column {
+    margin: 1em .5vw;
+    padding: 10px 8vw;
+    width: 30vw;
+}
 
+.flex-row .column:hover {
+    border: 5px solid;
+    padding: 5px calc(8vw - 5px);
+    transition-duration: 100ms;
+    border-radius: 20px;
+}
+
+.flex-row .column.likes {
+    border-color: green;
+}
+.flex-row .column.likes:hover {
+    border-color: green;
+    background-color: rgba(green, .5);
+
+}
+.flex-row .column.dislikes {
+    border-color: red;
+}
+.logo {
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    transition-duration: 100ms;
+    margin: 5px 0;
+    height: 20vh;
+}
+.logo:hover {
+    transition-duration: 100ms;
+    height: calc(20vh - 10px);
+    border: 10px solid white;
+}
 .content {
+    flex-direction: column;
     background-color: olivedrab;
 }
 .item {
