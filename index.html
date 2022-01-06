@@ -30,6 +30,12 @@
                 return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
         }
     </script>
+
+    <h4>FF14 Queue Time Calculator</h4>
+    <div>
+        This calculator works on the knowledge that the queue lets 75 players in every two minutes. The result is a rough approximation but should be a good guide.
+    </div>
+    <br>
     Players in Queue:
     <input id="queue" />
     <button onclick="findQueueTime()">Submit</button>
