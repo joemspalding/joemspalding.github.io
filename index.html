@@ -6,17 +6,45 @@
 
     
     <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
 </script> 
 </head>
 <body>
-    <header class="section">
+    <script>
+        function findQueueTime() {
+            
+            let players = document.getElementById('queue').value;
+            players = Number(players);
+            minutes = (players/75)*2
+            time = decimalToTime(minutes)
+            document.getElementById('minutes').innerHTML = time
+
+            console.log(players);
+            console.log(minutes);
+
+        }
+
+        function decimalToTime(minutes) {
+                var sign = minutes < 0 ? "-" : "";
+                var min = Math.floor(Math.abs(minutes));
+                var sec = Math.floor((Math.abs(minutes) * 60) % 60);
+                return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
+        }
+    </script>
+    Players in Queue:
+    <input id="queue" />
+    <button onclick="findQueueTime()">Submit</button>
+    <br/>
+    Minutes to wait: 
+    <div id="minutes"></div>
+
+
+    <!-- <header class="section">
         <div class="title">Joe Spalding</div>
         <div class="subtitle">Check me out im cool B^)</div>
     </header>
     <div class="section about">
         <div class="about-title">Who IS This "Joe" Guy???</div>
-        <div class="about">I'm going to talk about myself here</div>
+        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dolor sit amet velit aliquet posuere ac quis est. Donec consequat, est tristique placerat imperdiet, lorem massa fringilla velit, non sodales mauris justo et sem. Donec a arcu lorem. Nullam bibendum suscipit lacus, sed ultrices ex consectetur in. Integer aliquet a sem vitae vehicula. Sed scelerisque libero sit amet tortor interdum, nec tristique quam feugiat.</div>
         <div class="flex-row">
             <div class="column likes">
                 <h3>Likes</h3>
@@ -57,5 +85,5 @@
         <div class="section content">
             <img class="logo" src="./assets/rust.svg">
         </div>
-    </div>
+    </div> -->
 </body>

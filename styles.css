@@ -1,4 +1,4 @@
-body{
+/* body{
     margin: 0;
     font-family: 'Roboto Mono', monospace;
 }
@@ -20,6 +20,7 @@ header {
 
 .about {
     flex-direction: column;
+    margin: 0 5vw;
 }
 .flex-row {
     display: flex;
@@ -30,6 +31,10 @@ header {
 }
 .dislikes {
     border-color: red;
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0;
 }
 .flex-row .column {
     margin: 1em .5vw;
@@ -74,4 +79,4 @@ header {
 }
 .item {
     margin: 0 10vw;
-}
+} */
